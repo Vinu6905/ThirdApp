@@ -1,0 +1,119 @@
+<!-- Data Binding or Property Binding we are using [] -->
+<!-- <input type="text" [disabled]="boolvalue1"> 
+<input type="text" [disabled]="boolvalue2"> -->
+
+<!-- Style Binding  -->
+
+<div [style.color]="'red'">{{name}}</div>
+
+<div [style.color] = "'green'" 
+     [style.text-align] = "'center'" 
+     [style.font-size.px]="'24'" >
+  GeeksforGeeks
+</div>
+<hr>
+    <!-- Angular Style Binding -->
+
+    <h1 [ngStyle]="ref">Login</h1>
+    <hr>
+    <!-- Property Binding -->
+<h1>Property Bind</h1>
+      <div>
+        <label>Property Binding</label>
+        <input type="text" [disabled]="propbinding " >
+      </div>
+      <hr>
+    <!-- Event Binding -->
+    <h1>Event Bindig</h1>
+    <button (click)="vinayak1()"
+    >Button</button>
+    <hr>
+
+    <!-- Twoway Binding using Ng Module -->
+
+<h1>Welcome to Twoway Bindings</h1>
+<input type="text" [(ngModel)]="hesaru">
+  <h1>{{hesaru}}</h1>
+
+  <input type="text" [(ngModel)]="loginware">
+  <h1>{{loginware}}</h1>
+
+  <hr>
+
+    <!-- One way Binding Template refrence  variable -->
+    <h1>One way Binding Template refrence  variable</h1>
+
+    <input type="text" #apple>
+    <button (click)="apple1(apple.value)">Apple </button>
+
+    <input type="text" #value2>
+    <button (click)="Camel(value2 .value)">Camelu</button>
+
+    <hr>
+    <!-- Two Way Bindig Using template Refrence variable-->
+    <h1>Two Way Bindig Using template Refrence variable</h1>
+
+    <input type="text" #value1>
+    <button (click)="myfunction1(value1.value)">Button</button>
+    {{name1}}
+<br><br>
+
+
+    <input type="text" #bheem>
+    <button (click)="chotabheem(bheem.value)">Bheem</button>
+   
+   <hr>
+<!-- Pipe Operator Using 
+<h1>{{name | uppercase}}</h1> 
+<h1>{{name | lowercase}}</h1>
+<h1>{{person | json}}</h1>
+<h1>{{date}}</h1>
+<h1>{{date | date :"medium"}}</h1>
+<h1>{{date | date :"short"}}</h1>-->
+
+<!-- Structural Directives -->
+
+<h1 *ngIf="true"> Welcome to Home</h1>
+<h1 *ngIf="false ; else templatename ">Welcome to Home1</h1> 
+<ng-template #templatename>Welcome to Home2</ng-template>
+
+<h1 *ngIf="true">Welcome to Structural Directives</h1>
+<h1 *ngIf="false ;else templatename1">Welcome to Structural Directives1</h1>
+<ng-template #templatename1>Welcome to Structural Directives1</ng-template>
+
+<!-- ForOF Structural Directies  it is Suitable for only Iterable datatypes-->
+<h1  *ngFor =" let data of fruits">
+  {{data}}
+</h1>
+<h1 *ngFor = "let data1 of players">
+  {{data1}}
+</h1>
+
+<h1 *ngFor="let vegu of vegetables">{{vegu}} </h1>
+
+
+<!-- SwitchCase  -->
+
+<div [ngSwitch]="color">
+<h1 *ngSwitchCase="'black'">Black Choice</h1>
+<h1 *ngSwitchCase="'red'">Red Choice</h1>
+<h1 *ngSwitchCase="'Yellow'">Yellow Choice</h1>
+<h1 *ngSwitchCase="'blue'">Bluee Choice</h1>
+</div>
+
+<div [ngSwitch]="player">
+<h1 *ngSwitchCase="'dhoni'" >dhoni is Playing</h1>
+<h1 *ngSwitchCase="'ganguly'" >ganguly is Playing</h1>
+<h1 *ngSwitchCase="'raina'" >raina is Playing</h1>
+<h1 *ngSwitchCase="'sharma'" >virat is Playing</h1>
+<h1 *ngSwitchDefault="default">No one is Playing</h1>
+</div>
+
+<div [ngSwitch]="player1">
+  <h1 *ngSwitchCase="'dhoni'">Dhoni  is playig</h1>
+  <h1 *ngSwitchCase="'virat'">Virat is Playing</h1>
+  <h1 *ngSwitchCase="'raina'">Raina is Playing</h1>
+  <h1 *ngSwitchCase="'vinayak'">Vinayak is playing</h1>
+  <h1 *ngSwitchDefault="default">no one  is Playings</h1>
+</div>
+ 
